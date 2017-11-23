@@ -1,0 +1,38 @@
+body {
+  background-color: #282C34;
+  color: White;
+  font-family: 'Concert One', cursive;
+  margin: 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+p {
+  /* font-size: 20px; */
+  padding: 1px;
+}
+
+.center_textform {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.result {
+  color: LightGray;
+  font-size: 18px;
+}
+
+::-moz-placeholder {                               /* For mozilla-based browsers */
+   text-align: center;
+}
+
+::-webkit-input-placeholder {                      /* For browsers supporting webkit */
+   text-align: center;
+}
+
+#searchTopic.form-control {
+  width: 275px;
+}

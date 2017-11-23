@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Concert+One" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheets/bootstrap.min.css">
+    <link rel="stylesheet" href="stylesheets/wikiviewer.css">
+    <title>Wikipedia Viewer</title>
+  </head>
+
+  <body class="container-fluid">
+    <div class="row">
+      <div class="container text-center">
+        <p><h1>Wikipedia Search</h1></p>
+      </div>
+    </div>
+
+    <!--- text field search --->
+
+    <div class="row">
+      <div class="container">
+        <div class="form-group">
+          <input type="text" class="form-control center_textform" id="searchTopic" placeholder="Type subject and press ENTER" autofocus>
+        </div>
+      </div>
+    </div>
+
+    <!--- button to open a random Wikipedia article --->
+
+    <div class="row">
+      <div class="container">
+        <div class="form-group">
+          <span>
+            <button class="btn btn-primary" id="getRandom" name="button">Random Article</button>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!--- display returned search results from Wikipedia --->
+    <div class="row">
+      <div class="container container-result">
+        <span>
+          <p class="row_item"></p>
+        </span>
+      </div>
+    </div>
+
+    <script src="scripts/wikiviewer.js" charset="utf-8"></script>
+  </body>
+</html>
