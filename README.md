@@ -1,6 +1,6 @@
 Wikipedia Viewer
-- A Free Code Camp front-end challenge, provides an Wikipedia interface to a user to search for topics stored in Wikipedia or generate a random topic.
-- Implemented in vanilla JavaScript using standard JS 'coding' style
+- A Free Code Camp front-end challenge, provide a Wikipedia interface to search for user-supplied topics or generate a random Wikipedia entry.
+- Implemented in vanilla JavaScript, using the standard JS coding style.
 
 Resources used:
 - Bootstrap CSS
