@@ -1,21 +1,19 @@
-// fcc wikipedia viewer challenge implemented in vanilla JavaScript using standard JS 'coding' style
+document.getElementById('getRandom').addEventListener('click', getRandom)             // has the 'random' button been clicked?
 
-document.getElementById('getRandom').addEventListener('click', getRandom)
-
-function getRandom () {                                                               // opens a random wikipedia article
+function getRandom () {                                                               // perform a random search in Wikipedia
   window.open('https://en.wikipedia.org/wiki/Special:Random')
 }
 
-document.getElementById('searchTopic').addEventListener('keypress', function (e) {    // search user-supplied topic in Wikipedia
+document.getElementById('searchTopic').addEventListener('keypress', function (e) {    // search user supplied topic in Wikipedia
   var lookUpTopic = document.getElementById('searchTopic').value
 
-  if (e.keyCode === 13) {                                                             // is the ENTER key pressed?
+  if (e.keyCode === 13) {                                                             // has the ENTER key been pressed?
     document.getElementById('searchTopic').value = ''
 
     var rowItems = document.querySelectorAll('.row_item')
     var itemCount = rowItems.length
 
-    for (var rowCounter = 0; rowCounter < itemCount; rowCounter++) {                  // clears any previous returned search results
+    for (var rowCounter = 0; rowCounter < itemCount; rowCounter++) {                  // clear up previous search results
       var elementTarget = document.querySelector('.row_item')
       elementTarget.parentNode.removeChild(elementTarget)
     }
@@ -31,7 +29,7 @@ document.getElementById('searchTopic').addEventListener('keypress', function (e)
         var resultHits = wikiData.query.search.length
         var urlWikipedia = 'https://en.wikipedia.org/wiki/'
 
-        for (var counter = 0; counter < resultHits; counter++) {                      // each result stored on their own <p> element
+        for (var counter = 0; counter < resultHits; counter++) {                      // store each result on separate <p> elements
           var urlResult = urlWikipedia + wikiData.query.search[counter].title
           var hitResult = wikiData.query.search[counter].title
           var parent = document.querySelector('.container-result')
@@ -47,7 +45,7 @@ document.getElementById('searchTopic').addEventListener('keypress', function (e)
           parent.append(p)
         }
       } else {
-        window.alert('Unable to access Wikipedia API')                                // unable to reach Wikipedia API
+        window.alert('Unable to access Wikipedia API')
       }
     }
     xhr.send()                                                                        // execute AJAX request
